@@ -113,7 +113,7 @@ const informationTitles: InformationTitle[] = [
         id: crypto.randomUUID(),
         name: '🌐 Blog',
         icon: '',
-        link: 'https://github.com/ChrisChou-freeman',
+        link: '/',
         isLink: true
       }
     ]
