@@ -6,7 +6,12 @@ import { InfoGroup } from "./bottomInfo"
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between'>
+    <main 
+      style={{
+        minWidth: '1000px'
+      }}
+      className='flex min-h-screen flex-col items-center justify-between'
+    >
       <NavTitle />
       <div className='flex flex-col pl-48 w-full'>
         <div className='flex justify-start w-full'>
