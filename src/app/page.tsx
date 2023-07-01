@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 import { NavTitle } from "./navtitle"
 import { Footer } from "./footer"
 import { InfoGroup } from "./bottomInfo"
@@ -14,8 +12,11 @@ export default function Home() {
     >
       <NavTitle />
       <div className='flex flex-col pl-48 w-full'>
+        <div className='flex justify-start w-full pb-5'>
+          <img src='/images/profile.jpg' width={100} className='rounded-full' />
+        </div>
         <div className='flex justify-start w-full'>
-          <h1 className='text-4xl font-bold'>Hello, I'm Chris Chou</h1>
+          <h1 className='text-4xl font-bold'>Hello, I'm Chris</h1>
         </div>
         <div className='flex justify-start w-full pt-5 pb-5'>
           <p>Indie develop and freelancer</p>

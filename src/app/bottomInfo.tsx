@@ -130,7 +130,7 @@ function BottomInfo(prop: { info: InformationTitle }): JSX.Element {
           const islink = sub.isLink
           return (
             islink
-              ? (<a key={sub.id} className='underline' href={sub.link}>{sub.name}</a>)
+              ? (<a key={sub.id} className='hover:underline' href={sub.link}>{sub.name}</a>)
               : (<p>{sub.name}</p>)
           )
         })}
