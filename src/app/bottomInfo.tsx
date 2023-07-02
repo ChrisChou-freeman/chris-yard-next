@@ -8,6 +8,7 @@ export interface IconNameLink {
   icon: string
   link: string
   isLink: boolean
+  disable: boolean
 }
 
 export interface InformationTitle {
@@ -26,6 +27,7 @@ const informationTitles: InformationTitle[] = [
         name: `👨 male, ${getCurrentYear() - 1995}`,
         icon: '',
         link: '',
+        disable: false,
         isLink: false
       },
       { 
@@ -33,6 +35,7 @@ const informationTitles: InformationTitle[] = [
         name: '🇨🇳 from China GanZhou',
         icon: '',
         link: '',
+        disable: false,
         isLink: false 
       },
       { 
@@ -40,6 +43,7 @@ const informationTitles: InformationTitle[] = [
         name: '‍💻 full stack developer',
         icon: '',
         link: '',
+        disable: false,
         isLink: false 
       },
       { 
@@ -47,6 +51,7 @@ const informationTitles: InformationTitle[] = [
         name: '👐 freelancer',
         icon: '',
         link: '',
+        disable: false,
         isLink: false 
       },
       { 
@@ -54,6 +59,7 @@ const informationTitles: InformationTitle[] = [
         name: '🥹 nearly homeless',
         icon: '',
         link: '',
+        disable: false,
         isLink: false 
       },
     ]
@@ -67,6 +73,7 @@ const informationTitles: InformationTitle[] = [
         name: '🎧 DeepFocus',
         icon: '',
         link: 'https://apps.apple.com/app/deepfocus-pomodoro-sounds/id1628457656',
+        disable: false,
         isLink: true
       },
       {
@@ -74,6 +81,15 @@ const informationTitles: InformationTitle[] = [
         name: '📒 NoteApp(working on it)',
         icon: '',
         link: '/',
+        disable: false,
+        isLink: true
+      },
+      {
+        id: crypto.randomUUID(),
+        name: '☑️ PMBoard(remove from app store)',
+        icon: '',
+        link: '/',
+        disable: true,
         isLink: true
       },
     ]
@@ -87,6 +103,7 @@ const informationTitles: InformationTitle[] = [
         name: '📮 Email',
         icon: '',
         link: 'mailto:bornbefreesolo@hotamil.com',
+        disable: false,
         isLink: true 
       },
       { 
@@ -94,6 +111,7 @@ const informationTitles: InformationTitle[] = [
         name: '🐦 Twitter',
         icon: '',
         link: 'https://twitter.com/ChrisWantBeFree',
+        disable: false,
         isLink: true
       },
     ]
@@ -107,6 +125,7 @@ const informationTitles: InformationTitle[] = [
         name: '💾 Github',
         icon: '',
         link: 'https://github.com/ChrisChou-freeman',
+        disable: false,
         isLink: true
       },
       {
@@ -114,6 +133,7 @@ const informationTitles: InformationTitle[] = [
         name: '🌐 Blog',
         icon: '',
         link: '/',
+        disable: false,
         isLink: true
       }
     ]
@@ -130,8 +150,8 @@ function BottomInfo(prop: { info: InformationTitle }): JSX.Element {
           const islink = sub.isLink
           return (
             islink
-              ? (<a key={sub.id} className='hover:underline' href={sub.link}>{sub.name}</a>)
-              : (<p>{sub.name}</p>)
+              ? (<a key={sub.id} className={`${sub.disable ? 'line-through text-gray-400' : 'hover:underline '}`} href={sub.link}>{sub.name}</a>)
+              : (<p key={sub.id}>{sub.name}</p>)
           )
         })}
       </div>
