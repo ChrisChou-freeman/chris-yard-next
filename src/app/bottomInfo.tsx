@@ -78,9 +78,9 @@ const informationTitles: InformationTitle[] = [
       },
       {
         id: crypto.randomUUID(),
-        name: '📒 NoteApp(working on it)',
+        name: '📒 Simark',
         icon: '',
-        link: '/',
+        link: 'https://apps.apple.com/app/simark/id6456388881',
         disable: false,
         isLink: true
       },
@@ -150,7 +150,7 @@ function BottomInfo(prop: { info: InformationTitle }): JSX.Element {
           const islink = sub.isLink
           return (
             islink
-              ? (<a key={sub.id} className={`${sub.disable ? 'line-through text-gray-400' : 'hover:underline '}`} href={sub.link}>{sub.name}</a>)
+              ? (<a target="_blank" key={sub.id} className={`${sub.disable ? 'line-through text-gray-400' : 'hover:underline '}`} href={sub.link}>{sub.name}</a>)
               : (<p key={sub.id}>{sub.name}</p>)
           )
         })}

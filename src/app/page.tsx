@@ -12,8 +12,16 @@ export default function Home() {
     >
       <NavTitle />
       <div className='flex flex-col pl-48 w-full'>
-        <div className='flex justify-start w-full pb-5'>
-          <img src='/images/profile.jpg' width={100} className='rounded-full' />
+        <div 
+          style={{
+            width: 100,
+            height: 100,
+            background: 'url(/images/profile.jpg)',
+            backgroundSize: '100% 100%',
+            backgroundPosition: 'center',
+            borderRadius: '50%'
+          }}
+          className='mb-5'>
         </div>
         <div className='flex justify-start w-full'>
           <h1 className='text-4xl font-bold'>Hello, I'm Chris</h1>
