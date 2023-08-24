@@ -88,7 +88,7 @@ const informationTitles: InformationTitle[] = [
         id: crypto.randomUUID(),
         name: '☑️ PMBoard(remove from app store)',
         icon: '',
-        link: '/',
+        link: '#',
         disable: true,
         isLink: true
       },
@@ -132,7 +132,7 @@ const informationTitles: InformationTitle[] = [
         id: crypto.randomUUID(),
         name: '🌐 Blog',
         icon: '',
-        link: '/',
+        link: '#',
         disable: false,
         isLink: true
       }
